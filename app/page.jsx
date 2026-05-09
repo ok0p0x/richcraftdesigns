@@ -1,51 +1,69 @@
+const featuredCollections = [
+  {
+    title: "Gaming & Sci‑Fi",
+    subtitle: "Blueprints, fandom builds, clocks, deck boxes, and collector pieces.",
+    emoji: "🎲",
+  },
+  {
+    title: "Illuminated Layered Art",
+    subtitle: "Dimensional layered builds with lighting, depth, and dramatic contrast.",
+    emoji: "💡",
+  },
+  {
+    title: "Custom Gifts & Decor",
+    subtitle: "Slate, wood, memorials, cabin decor, and personalized keepsakes.",
+    emoji: "🪵",
+  },
+];
+
 const projects = [
   {
-    title: "Custom Commander Deck Boxes",
-    category: "Gaming Gear",
-    image: "/projects/deck-box.jpg",
-    fallback: "🎲",
+    title: "Enterprise Blueprint Artwork",
+    category: "Gaming & Sci‑Fi",
+    image: "/projects/enterprise-blueprint.jpg",
+    fallback: "🚀",
     description:
-      "Personalized deck boxes for people who sleeve cards, summon chaos, and still appreciate clean craftsmanship.",
+      "Layered blueprint-style artwork inspired by iconic starships and sci‑fi engineering aesthetics.",
+  },
+  {
+    title: "Millennium Falcon Clock",
+    category: "Gaming & Sci‑Fi",
+    image: "/projects/falcon-clock.jpg",
+    fallback: "🛰️",
+    description:
+      "Laser-cut fandom clocks blending layered wood, engraving, and collector-display energy.",
+  },
+  {
+    title: "Layered Illuminated Artwork",
+    category: "Illuminated Art",
+    image: "/projects/layered-light-art.jpg",
+    fallback: "💡",
+    description:
+      "Multi-layer LED-enhanced artwork designed to glow with depth, texture, and shadow.",
   },
   {
     title: "Engraved Slate Coasters",
-    category: "Slate Engraving",
+    category: "Custom Gifts",
     image: "/projects/slate-coasters.jpg",
     fallback: "☕",
     description:
-      "Gift-ready slate coasters with sharp engraving for cabins, bars, game rooms, and dangerously classy coffee tables.",
+      "Personalized slate coaster sets for game rooms, cabins, bars, and memorable gifts.",
   },
   {
-    title: "Layered Wood Wall Art",
-    category: "Woodwork",
-    image: "/projects/layered-art.jpg",
-    fallback: "🪵",
+    title: "Custom Deck Boxes",
+    category: "Gaming Gear",
+    image: "/projects/deck-box.jpg",
+    fallback: "🎴",
     description:
-      "Dimensional laser-cut wall art with stain, shadow, texture, and enough depth to make a flat wall feel unemployed.",
+      "Custom laser-crafted deck boxes designed for collectors, tabletop gamers, and commanders.",
   },
   {
-    title: "Metal Signs & Plasma Work",
-    category: "Metal Work",
-    image: "/projects/metal-sign.jpg",
-    fallback: "⚒️",
-    description:
-      "Rugged shop signs, decorative cuts, engraved metal pieces, and powder-fill accents with sparks in their DNA.",
-  },
-  {
-    title: "Custom Cabin Gifts",
-    category: "Personalized Gifts",
-    image: "/projects/cabin-gift.jpg",
-    fallback: "🌲",
-    description:
-      "Personal pieces for retirement, cabins, family milestones, lake life, and the occasional Bigfoot-related situation.",
-  },
-  {
-    title: "Workshop Process Videos",
-    category: "Behind the Beam",
-    image: "/projects/workshop-video.jpg",
+    title: "Workshop Process & Builds",
+    category: "Behind the Scenes",
+    image: "/projects/workshop-process.jpg",
     fallback: "🔥",
     description:
-      "Short clips of test burns, engraving passes, plasma cuts, sanding, staining, and tiny shop victories.",
+      "The sparks, smoke, stain, assembly, and laser passes that turn raw materials into finished work.",
   },
 ];
 
@@ -116,6 +134,27 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="section-shell collections-section">
+        <div className="section-heading">
+          <p className="eyebrow">Featured Collections</p>
+          <h2>Custom creations built for collectors, gamers, cabins, workshops, and wonderfully specific obsessions.</h2>
+          <p>
+            Rich Craft Designs blends laser engraving, layered woodworking, fandom-inspired craftsmanship,
+            and rugged fabrication into one-of-a-kind custom builds.
+          </p>
+        </div>
+
+        <div className="collections-grid">
+          {featuredCollections.map((collection) => (
+            <article key={collection.title} className="collection-card">
+              <div className="collection-icon">{collection.emoji}</div>
+              <h3>{collection.title}</h3>
+              <p>{collection.subtitle}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
       <section id="services" className="section-shell services-grid">
         {services.map(([title, text]) => (
           <article key={title} className="service-card">
@@ -134,6 +173,20 @@ export default function Home() {
               Add your upscaled project photos, short shop videos, product turntables, engraving closeups,
               and before/after shots here.
             </p>
+          </div>
+
+          <div className="gallery-banner">
+            <div>
+              <p className="eyebrow">Real Projects</p>
+              <h3>From blueprint artwork and fandom builds to engraved slate and layered LED pieces.</h3>
+            </div>
+            <div className="gallery-pill-row">
+              <span>Laser Engraving</span>
+              <span>Woodworking</span>
+              <span>Metal Work</span>
+              <span>Custom Gifts</span>
+              <span>Gaming Decor</span>
+            </div>
           </div>
 
           <div className="project-grid">
@@ -170,6 +223,37 @@ export default function Home() {
             <h3>Get the finished piece</h3>
             <p>Local pickup or shipping depending on the item, timeline, and level of ridiculousness.</p>
           </article>
+        </div>
+      </section>
+
+      <section className="section-shell process-gallery-section">
+        <div className="section-heading">
+          <p className="eyebrow">Workshop Process</p>
+          <h2>The process matters just as much as the finished piece.</h2>
+          <p>
+            Lasers firing, stain soaking into grain, layered cuts stacking together, sparks flying from plasma work,
+            and the small details that make handcrafted work feel personal.
+          </p>
+        </div>
+
+        <div className="process-grid">
+          <div className="process-card tall">
+            <span>🔥</span>
+            <h3>Laser & Plasma Work</h3>
+            <p>Clean cuts, glowing passes, smoke drift, and precision fabrication.</p>
+          </div>
+
+          <div className="process-card">
+            <span>🪵</span>
+            <h3>Wood Finishing</h3>
+            <p>Stain, texture, layered depth, and handcrafted assembly.</p>
+          </div>
+
+          <div className="process-card">
+            <span>🎨</span>
+            <h3>Custom Paint & Fill</h3>
+            <p>Color fill, contrast work, and dimensional detailing.</p>
+          </div>
         </div>
       </section>
 
