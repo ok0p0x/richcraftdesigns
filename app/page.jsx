@@ -93,7 +93,7 @@ export default function Home() {
         </div>
 
         <div className="hero-video-wrapper">
-          <video className="hero-video" autoPlay muted loop playsInline poster="/projects/workshop-process.jpg">
+          <video className="hero-video" autoPlay muted loop playsInline preload="auto">
             <source src="/workshop-hero.mp4" type="video/mp4" />
           </video>
         </div>
