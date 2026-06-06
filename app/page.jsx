@@ -82,8 +82,11 @@ export default function Home() {
           <p className="eyebrow">Handcrafted in Placerville, California</p>
           <h1>Custom laser, wood, and metal work for people who want something personal.</h1>
           <p className="hero-text">
-            Rich Craft Designs creates engraved slate, custom gaming gear, layered wood art,
-            metal decor, and personalized gifts with a clean maker-shop finish.
+            Every project starts as a rough idea, sketch, fandom, logo, memory, or problem to solve. 
+            Rich Craft Designs specializes in custom laser, wood, metal, and illuminated creations 
+            built around your ideas, interests, and spaces. Many of the pieces featured throughout the
+            site are available for purchase and also serve as examples of the shop’s custom design and
+            fabrication capabilities.
           </p>
 
           <div className="button-row">
