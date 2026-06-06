@@ -42,10 +42,10 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="hero-gallery">
-          <div className="tile tile-one">🪵</div>
-          <div className="tile tile-two">🔥</div>
-          <div className="tile tile-three">🎲</div>
+        <div className="hero-video-wrapper">
+          <video className="hero-video" autoPlay muted loop playsInline>
+             <source src="/workshop-hero.mp4" type="video/mp4" />
+           </video>
         </div>
       </section>
 
