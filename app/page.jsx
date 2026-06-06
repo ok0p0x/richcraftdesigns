@@ -36,7 +36,7 @@ export default function Home() {
               Shop Etsy
             </a>
 
-            <a className="button secondary" href="mailto:rich@richcraftdesigns.com">
+            <a className="button secondary" href="mailto:info@richcraftdesigns.com">
               Request a Custom Order
             </a>
           </div>
