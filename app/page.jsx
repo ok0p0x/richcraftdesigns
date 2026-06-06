@@ -1,86 +1,156 @@
+const projects = [
+  {
+    title: "Enterprise Blueprint Artwork",
+    category: "Sci-Fi / Collector Art",
+    image: "/projects/enterprise-blueprint.jpg",
+    description: "Layered blueprint-style artwork inspired by iconic starship engineering and clean display-piece design.",
+  },
+  {
+    title: "Millennium Falcon Clock",
+    category: "Gaming & Sci-Fi Decor",
+    image: "/projects/falcon-clock.jpg",
+    description: "Laser-cut fandom clocks blending layered wood, engraving, and collector-display energy.",
+  },
+  {
+    title: "Layered Illuminated Artwork",
+    category: "Illuminated Art",
+    image: "/projects/layered-light-art.jpg",
+    description: "Multi-layer LED-enhanced artwork designed to glow with depth, contrast, and shadow.",
+  },
+  {
+    title: "Engraved Slate Coasters",
+    category: "Custom Gifts",
+    image: "/projects/slate-coasters.jpg",
+    description: "Personalized slate coaster sets for game rooms, cabins, bars, and memorable gifts.",
+  },
+  {
+    title: "Custom Deck Boxes",
+    category: "Gaming Gear",
+    image: "/projects/deck-box.jpg",
+    description: "Custom laser-crafted boxes designed for collectors, tabletop gamers, and commanders.",
+  },
+  {
+    title: "Workshop Process",
+    category: "Behind the Scenes",
+    image: "/projects/workshop-process.jpg",
+    description: "The sparks, smoke, stain, assembly, and laser passes that turn raw material into finished work.",
+  },
+];
+
+const services = [
+  { title: "Laser Engraving", text: "Wood, slate, signs, gifts, plaques, decor, gaming accessories, and crisp personalized details." },
+  { title: "Woodworking", text: "Layered art, display pieces, home decor, tabletop accessories, and custom-built keepsakes." },
+  { title: "Metal & Plasma", text: "Decorative cuts, shop pieces, rugged signs, and metal accents with a little spark baked in." },
+];
+
+function ProjectCard({ project }) {
+  return (
+    <article className="project-card">
+      <div className="project-image-wrap">
+        <img src={project.image} alt={project.title} />
+      </div>
+      <div className="project-copy">
+        <p>{project.category}</p>
+        <h3>{project.title}</h3>
+        <span>{project.description}</span>
+      </div>
+    </article>
+  );
+}
+
 export default function Home() {
   return (
     <main>
-      <nav className="nav">
+      <header className="site-header">
         <a href="#top" className="brand">
           <span className="brand-mark">R</span>
-          <span>
+          <span className="brand-text">
             <strong>Rich Craft Designs</strong>
-            <small>WOOD • METAL • LASER</small>
+            <small>Wood • Metal • Laser</small>
           </span>
         </a>
 
-        <div className="nav-links">
+        <nav className="nav-links">
           <a href="#work">Work</a>
           <a href="#services">Services</a>
           <a href="#custom">Custom Orders</a>
-        </div>
-      </nav>
+        </nav>
+      </header>
 
-      <section id="top" className="hero section-shell">
+      <section id="top" className="hero shell">
         <div className="hero-copy">
-          <p className="eyebrow">Custom handcrafted work from Placerville, California</p>
-
-          <h1>
-            Custom pieces with sawdust, sparks, and suspiciously precise lasers.
-          </h1>
-
+          <p className="eyebrow">Handcrafted in Placerville, California</p>
+          <h1>Custom laser, wood, and metal work for people who want something personal.</h1>
           <p className="hero-text">
-            Rich Craft Designs creates engraved slate, custom gaming gear,
-            layered wood art, metal decor, and personalized gifts built with
-            shop-grade grit and gift-worthy polish.
+            Rich Craft Designs creates engraved slate, custom gaming gear, layered wood art,
+            metal decor, and personalized gifts with a clean maker-shop finish.
           </p>
 
           <div className="button-row">
-            <a className="button primary" href="https://www.etsy.com/shop/RichCraftMade">
-              Shop Etsy
-            </a>
-
-            <a className="button secondary" href="mailto:info@richcraftdesigns.com">
-              Request a Custom Order
-            </a>
+            <a className="button primary" href="https://www.etsy.com/shop/RichCraftMade">Shop Etsy</a>
+            <a className="button secondary" href="mailto:rich@richcraftdesigns.com?subject=Custom%20Order%20Request">Request Custom Work</a>
           </div>
         </div>
 
         <div className="hero-video-wrapper">
-          <video className="hero-video" autoPlay muted loop playsInline>
-             <source src="/workshop-hero.mp4" type="video/mp4" />
-           </video>
+          <video className="hero-video" autoPlay muted loop playsInline poster="/projects/workshop-process.jpg">
+            <source src="/workshop-hero.mp4" type="video/mp4" />
+          </video>
         </div>
       </section>
 
-      <section id="work" className="section-shell">
+      <section className="intro-strip shell">
+        <div><strong>Collector pieces</strong><span>Sci-fi, gaming, fandom, and display-ready builds.</span></div>
+        <div><strong>Custom gifts</strong><span>Slate, wood, cabin decor, memorials, and personal keepsakes.</span></div>
+        <div><strong>Workshop-made</strong><span>Laser engraving, woodworking, plasma, finishing, and assembly.</span></div>
+      </section>
+
+      <section id="work" className="work-section shell">
         <div className="section-heading">
-          <p className="eyebrow">Project Gallery</p>
-          <h2>Custom fandom craftsmanship with lasers, wood, and metal.</h2>
+          <p className="eyebrow">Featured Work</p>
+          <h2>Real projects, clean details, and enough shop grit to prove it was built, not printed.</h2>
         </div>
 
         <div className="project-grid">
-          <article className="project-card">
-            <img src="/projects/enterprise-blueprint.jpg" alt="Enterprise Blueprint" />
-            <div className="project-copy">
-              <h3>Enterprise Blueprint Artwork</h3>
-              <p>Layered blueprint-style artwork inspired by iconic starships and sci-fi engineering aesthetics.</p>
-            </div>
-          </article>
-
-          <article className="project-card">
-            <img src="/projects/falcon-clock.jpg" alt="Falcon Clock" />
-            <div className="project-copy">
-              <h3>Millennium Falcon Clock</h3>
-              <p>Laser-cut fandom clocks blending layered wood, engraving, and collector-display energy.</p>
-            </div>
-          </article>
-
-          <article className="project-card">
-            <img src="/projects/layered-light-art.jpg" alt="Layered Art" />
-            <div className="project-copy">
-              <h3>Layered Illuminated Artwork</h3>
-              <p>Multi-layer LED-enhanced artwork designed to glow with depth and shadow.</p>
-            </div>
-          </article>
+          {projects.map((project) => <ProjectCard key={project.title} project={project} />)}
         </div>
       </section>
+
+      <section id="services" className="services-section shell">
+        <div className="section-heading compact">
+          <p className="eyebrow">Services</p>
+          <h2>Small-batch custom work with a wide creative range.</h2>
+        </div>
+
+        <div className="service-grid">
+          {services.map((service) => (
+            <article className="service-card" key={service.title}>
+              <h3>{service.title}</h3>
+              <p>{service.text}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section id="custom" className="custom-section shell">
+        <div className="custom-card">
+          <p className="eyebrow">Custom Orders</p>
+          <h2>Have an idea? Send the rough version. The polished version starts here.</h2>
+          <p>
+            Logos, themes, photos, fandoms, names, dates, dimensions, cabin ideas,
+            tabletop gear, memorial pieces, and oddball concepts are all fair game.
+          </p>
+
+          <div className="button-row">
+            <a className="button primary" href="mailto:Info@richcraftdesigns.com?subject=Custom%20Order%20Request">Start a Custom Order</a>
+            <a className="button secondary" href="https://www.etsy.com/shop/RichCraftMade">View Etsy Shop</a>
+          </div>
+        </div>
+      </section>
+
+      <footer className="footer shell">
+        <p>Rich Craft Designs • Wood • Metal • Laser</p>
+      </footer>
     </main>
   );
 }
