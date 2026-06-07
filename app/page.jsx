@@ -3,99 +3,65 @@ const projects = [
     title: "Enterprise Blueprint Artwork",
     category: "Sci-Fi / Collector Art",
     image: "/projects/enterprise-blueprint.jpg",
-    description: "Layered blueprint-style artwork inspired by iconic starship engineering and clean display-piece design.",
+    description:
+      "Layered blueprint-style artwork inspired by iconic starship engineering and clean display-piece design.",
   },
   {
     title: "Millennium Falcon Clock",
     category: "Gaming & Sci-Fi Decor",
     image: "/projects/falcon-clock.jpg",
-    description: "Laser-cut fandom clocks blending layered wood, engraving, and collector-display energy.",
+    description:
+      "Laser-cut fandom clocks blending layered wood, engraving, and collector-display energy.",
   },
   {
     title: "Layered Illuminated Artwork",
     category: "Illuminated Art",
     image: "/projects/layered-light-art.jpg",
-    description: "Multi-layer LED-enhanced artwork designed to glow with depth, contrast, and shadow.",
+    description:
+      "Multi-layer LED-enhanced artwork designed to glow with depth, contrast, and shadow.",
   },
   {
     title: "Engraved Slate Coasters",
-    category: "Custom Gifts",
+    category: "Custom Gifts",a
     image: "/projects/slate-coasters.jpg",
-    description: "Personalized slate coaster sets for game rooms, cabins, bars, and memorable gifts.",
+    description:
+      "Personalized slate coaster sets for game rooms, cabins, bars, and memorable gifts.",
   },
   {
     title: "Custom Deck Boxes",
     category: "Gaming Gear",
     image: "/projects/deck-box.jpg",
-    description: "Custom laser-crafted boxes designed for collectors, tabletop gamers, and commanders.",
+    description:
+      "Custom laser-crafted boxes designed for collectors, tabletop gamers, and commanders.",
   },
   {
     title: "Workshop Process",
     category: "Behind the Scenes",
     image: "/projects/workshop-process.jpg",
-    description: "The sparks, smoke, stain, assembly, and laser passes that turn raw material into finished work.",
+    description:
+      "The sparks, smoke, stain, assembly, and laser passes that turn raw material into finished work.",
   },
 ];
 
-const metalYardArt = [
-  "/projects/metal-yard-art-01.jpg",
-  "/projects/metal-yard-art-02.jpg",
-  "/projects/metal-yard-art-03.jpg",
-  "/projects/metal-yard-art-04.jpg",
-  "/projects/metal-yard-art-05.jpg",
-  "/projects/metal-yard-art-06.jpg",
-  "/projects/metal-yard-art-07.jpg",
-  "/projects/metal-yard-art-08.jpg",
-  "/projects/metal-yard-art-09.jpg",
-  "/projects/metal-yard-art-10.jpg",
-  "/projects/metal-yard-art-11.jpg",
-  "/projects/metal-yard-art-12.jpg",
-  "/projects/metal-yard-art-13.jpg",
-  "/projects/metal-yard-art-14.jpg",
-  "/projects/metal-yard-art-15.jpg",
-  "/projects/metal-yard-art-16.jpg",
-  "/projects/metal-yard-art-17.jpg",
-  "/projects/metal-yard-art-18.jpg",
-  "/projects/metal-yard-art-19.jpg",
-  "/projects/metal-yard-art-20.jpg",
-  "/projects/metal-yard-art-21.jpg",
-  "/projects/metal-yard-art-22.jpg",
-  "/projects/metal-yard-art-23.jpg",
-  "/projects/metal-yard-art-24.jpg",
-  "/projects/metal-yard-art-25.jpg",
-  "/projects/metal-yard-art-26.jpg",
-  "/projects/metal-yard-art-27.jpg",
-  "/projects/metal-yard-art-28.jpg",
-  "/projects/metal-yard-art-29.jpg",
-  "/projects/metal-yard-art-30.jpg",
-  "/projects/metal-yard-art-31.jpg",
-  "/projects/metal-yard-art-32.jpg",
-  "/projects/metal-yard-art-33.jpg",
-  "/projects/metal-yard-art-34.jpg",
-  "/projects/metal-yard-art-35.jpg",
-  "/projects/metal-yard-art-36.jpg",
-  "/projects/metal-yard-art-37.jpg",
-  "/projects/metal-yard-art-38.jpg",
-  "/projects/metal-yard-art-39.jpg",
-  "/projects/metal-yard-art-40.jpg",
-  "/projects/metal-yard-art-41.jpg",
-  "/projects/metal-yard-art-42.jpg",
-  "/projects/metal-yard-art-43.jpg",
-  "/projects/metal-yard-art-44.jpg",
-];
+const metalYardArt = Array.from({ length: 44 }, (_, i) => {
+  return `/projects/Metal-Yard-Art (${i + 1}).jpg`;
+});
 
 const services = [
   {
     title: "Laser Engraving",
-    text: "Wood, slate, signs, gifts, plaques, decor, gaming accessories, and crisp personalized details.",
+    text:
+      "Wood, slate, signs, gifts, plaques, decor, gaming accessories, and crisp personalized details.",
   },
   {
     title: "Woodworking",
-    text: "Layered art, display pieces, home decor, tabletop accessories, and custom-built keepsakes.",
+    text:
+      "Layered art, display pieces, home decor, tabletop accessories, and custom-built keepsakes.",
   },
   {
     title: "Metal & Plasma",
-    text: "Decorative cuts, shop pieces, rugged signs, metal accents, and outdoor pieces with a little spark baked in.",
+    text:
+      "Decorative cuts, shop pieces, rugged signs, metal accents, yard art, and outdoor pieces with a little spark baked in.",
   },
 ];
 
@@ -138,6 +104,7 @@ export default function Home() {
         <div className="hero-copy">
           <p className="eyebrow">Handcrafted in Placerville, California</p>
           <h1>Custom laser, wood, and metal work for people who want something personal.</h1>
+
           <p className="hero-text">
             Every project starts as a rough idea, sketch, fandom, logo, memory, or problem to solve.
             Rich Craft Designs specializes in custom laser, wood, metal, and illuminated creations
@@ -147,7 +114,10 @@ export default function Home() {
           </p>
 
           <div className="button-row">
-            <a className="button primary" href="mailto:rich@richcraftdesigns.com?subject=Custom%20Order%20Request">
+            <a
+              className="button primary"
+              href="mailto:rich@richcraftdesigns.com?subject=Custom%20Order%20Request"
+            >
               Request Custom Work
             </a>
             <a className="button secondary" href="https://www.etsy.com/shop/RichCraftMade">
@@ -236,7 +206,10 @@ export default function Home() {
           </p>
 
           <div className="button-row">
-            <a className="button primary" href="mailto:rich@richcraftdesigns.com?subject=Custom%20Order%20Request">
+            <a
+              className="button primary"
+              href="mailto:rich@richcraftdesigns.com?subject=Custom%20Order%20Request"
+            >
               Start a Custom Order
             </a>
             <a className="button secondary" href="https://www.etsy.com/shop/RichCraftMade">
