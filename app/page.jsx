@@ -37,10 +37,66 @@ const projects = [
   },
 ];
 
+const metalYardArt = [
+  "/projects/metal-yard-art-01.jpg",
+  "/projects/metal-yard-art-02.jpg",
+  "/projects/metal-yard-art-03.jpg",
+  "/projects/metal-yard-art-04.jpg",
+  "/projects/metal-yard-art-05.jpg",
+  "/projects/metal-yard-art-06.jpg",
+  "/projects/metal-yard-art-07.jpg",
+  "/projects/metal-yard-art-08.jpg",
+  "/projects/metal-yard-art-09.jpg",
+  "/projects/metal-yard-art-10.jpg",
+  "/projects/metal-yard-art-11.jpg",
+  "/projects/metal-yard-art-12.jpg",
+  "/projects/metal-yard-art-13.jpg",
+  "/projects/metal-yard-art-14.jpg",
+  "/projects/metal-yard-art-15.jpg",
+  "/projects/metal-yard-art-16.jpg",
+  "/projects/metal-yard-art-17.jpg",
+  "/projects/metal-yard-art-18.jpg",
+  "/projects/metal-yard-art-19.jpg",
+  "/projects/metal-yard-art-20.jpg",
+  "/projects/metal-yard-art-21.jpg",
+  "/projects/metal-yard-art-22.jpg",
+  "/projects/metal-yard-art-23.jpg",
+  "/projects/metal-yard-art-24.jpg",
+  "/projects/metal-yard-art-25.jpg",
+  "/projects/metal-yard-art-26.jpg",
+  "/projects/metal-yard-art-27.jpg",
+  "/projects/metal-yard-art-28.jpg",
+  "/projects/metal-yard-art-29.jpg",
+  "/projects/metal-yard-art-30.jpg",
+  "/projects/metal-yard-art-31.jpg",
+  "/projects/metal-yard-art-32.jpg",
+  "/projects/metal-yard-art-33.jpg",
+  "/projects/metal-yard-art-34.jpg",
+  "/projects/metal-yard-art-35.jpg",
+  "/projects/metal-yard-art-36.jpg",
+  "/projects/metal-yard-art-37.jpg",
+  "/projects/metal-yard-art-38.jpg",
+  "/projects/metal-yard-art-39.jpg",
+  "/projects/metal-yard-art-40.jpg",
+  "/projects/metal-yard-art-41.jpg",
+  "/projects/metal-yard-art-42.jpg",
+  "/projects/metal-yard-art-43.jpg",
+  "/projects/metal-yard-art-44.jpg",
+];
+
 const services = [
-  { title: "Laser Engraving", text: "Wood, slate, signs, gifts, plaques, decor, gaming accessories, and crisp personalized details." },
-  { title: "Woodworking", text: "Layered art, display pieces, home decor, tabletop accessories, and custom-built keepsakes." },
-  { title: "Metal & Plasma", text: "Decorative cuts, shop pieces, rugged signs, and metal accents with a little spark baked in." },
+  {
+    title: "Laser Engraving",
+    text: "Wood, slate, signs, gifts, plaques, decor, gaming accessories, and crisp personalized details.",
+  },
+  {
+    title: "Woodworking",
+    text: "Layered art, display pieces, home decor, tabletop accessories, and custom-built keepsakes.",
+  },
+  {
+    title: "Metal & Plasma",
+    text: "Decorative cuts, shop pieces, rugged signs, metal accents, and outdoor pieces with a little spark baked in.",
+  },
 ];
 
 function ProjectCard({ project }) {
@@ -72,6 +128,7 @@ export default function Home() {
 
         <nav className="nav-links">
           <a href="#work">Work</a>
+          <a href="#metal-work">Metal Yard Art</a>
           <a href="#services">Services</a>
           <a href="#custom">Custom Orders</a>
         </nav>
@@ -82,16 +139,20 @@ export default function Home() {
           <p className="eyebrow">Handcrafted in Placerville, California</p>
           <h1>Custom laser, wood, and metal work for people who want something personal.</h1>
           <p className="hero-text">
-            Every project starts as a rough idea, sketch, fandom, logo, memory, or problem to solve. 
-            Rich Craft Designs specializes in custom laser, wood, metal, and illuminated creations 
-            built around your ideas, interests, and spaces. Many of the pieces featured throughout the
-            site are available for purchase and also serve as examples of the shop’s custom design and
-            fabrication capabilities.
+            Every project starts as a rough idea, sketch, fandom, logo, memory, or problem to solve.
+            Rich Craft Designs specializes in custom laser, wood, metal, and illuminated creations
+            built around your ideas, interests, and spaces. Many of the pieces featured throughout
+            the site are available for purchase and also serve as examples of the shop’s custom
+            design and fabrication capabilities.
           </p>
 
           <div className="button-row">
-            <a className="button primary" href="https://www.etsy.com/shop/RichCraftMade">Shop Etsy</a>
-            <a className="button secondary" href="mailto:rich@richcraftdesigns.com?subject=Custom%20Order%20Request">Request Custom Work</a>
+            <a className="button primary" href="mailto:rich@richcraftdesigns.com?subject=Custom%20Order%20Request">
+              Request Custom Work
+            </a>
+            <a className="button secondary" href="https://www.etsy.com/shop/RichCraftMade">
+              Shop Etsy
+            </a>
           </div>
         </div>
 
@@ -103,9 +164,18 @@ export default function Home() {
       </section>
 
       <section className="intro-strip shell">
-        <div><strong>Collector pieces</strong><span>Sci-fi, gaming, fandom, and display-ready builds.</span></div>
-        <div><strong>Custom gifts</strong><span>Slate, wood, cabin decor, memorials, and personal keepsakes.</span></div>
-        <div><strong>Workshop-made</strong><span>Laser engraving, woodworking, plasma, finishing, and assembly.</span></div>
+        <div>
+          <strong>Custom-first</strong>
+          <span>Most work starts with your idea, space, theme, logo, fandom, or rough sketch.</span>
+        </div>
+        <div>
+          <strong>Built in the shop</strong>
+          <span>Laser engraving, woodworking, plasma cutting, finishing, lighting, and assembly.</span>
+        </div>
+        <div>
+          <strong>Examples for sale</strong>
+          <span>Finished pieces may be available, but they also show what can be customized.</span>
+        </div>
       </section>
 
       <section id="work" className="work-section shell">
@@ -115,13 +185,34 @@ export default function Home() {
         </div>
 
         <div className="project-grid">
-          {projects.map((project) => <ProjectCard key={project.title} project={project} />)}
+          {projects.map((project) => (
+            <ProjectCard key={project.title} project={project} />
+          ))}
+        </div>
+      </section>
+
+      <section id="metal-work" className="metal-section shell">
+        <div className="section-heading">
+          <p className="eyebrow">Metal Yard Art</p>
+          <h2>Rustic outdoor pieces staged for cabins, shops, gardens, fences, patios, and wide-open spaces.</h2>
+          <p className="section-subtext">
+            These staged examples show the style, finish, and outdoor personality we can build around.
+            Pick from existing pieces or use them as a starting point for custom metal work.
+          </p>
+        </div>
+
+        <div className="metal-grid">
+          {metalYardArt.map((image, index) => (
+            <article className="metal-card" key={image}>
+              <img src={image} alt={`Metal yard art example ${index + 1}`} />
+            </article>
+          ))}
         </div>
       </section>
 
       <section id="services" className="services-section shell">
         <div className="section-heading compact">
-          <p className="eyebrow">Services</p>
+          <p className="eyebrow">Shop Capabilities</p>
           <h2>Small-batch custom work with a wide creative range.</h2>
         </div>
 
@@ -141,12 +232,16 @@ export default function Home() {
           <h2>Have an idea? Send the rough version. The polished version starts here.</h2>
           <p>
             Logos, themes, photos, fandoms, names, dates, dimensions, cabin ideas,
-            tabletop gear, memorial pieces, and oddball concepts are all fair game.
+            tabletop gear, memorial pieces, yard art, and oddball concepts are all fair game.
           </p>
 
           <div className="button-row">
-            <a className="button primary" href="mailto:Info@richcraftdesigns.com?subject=Custom%20Order%20Request">Start a Custom Order</a>
-            <a className="button secondary" href="https://www.etsy.com/shop/RichCraftMade">View Etsy Shop</a>
+            <a className="button primary" href="mailto:rich@richcraftdesigns.com?subject=Custom%20Order%20Request">
+              Start a Custom Order
+            </a>
+            <a className="button secondary" href="https://www.etsy.com/shop/RichCraftMade">
+              View Etsy Shop
+            </a>
           </div>
         </div>
       </section>
