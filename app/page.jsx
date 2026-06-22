@@ -22,7 +22,7 @@ const projects = [
   },
   {
     title: "Engraved Slate Coasters",
-    category: "Custom Gifts",a
+    category: "Custom Gifts",
     image: "/projects/slate-coasters.jpg",
     description:
       "Personalized slate coaster sets for game rooms, cabins, bars, and memorable gifts.",
