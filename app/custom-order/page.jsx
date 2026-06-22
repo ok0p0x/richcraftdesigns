@@ -1,4 +1,5 @@
-export default function CustomOrderPage() {
+export default function CustomOrderPage({ searchParams }) {
+  const requestedItem = searchParams?.item || "";
   return (
     <main>
       <header className="site-header">
