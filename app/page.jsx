@@ -3,66 +3,44 @@ const projects = [
     title: "Enterprise Blueprint Artwork",
     category: "Sci-Fi / Collector Art",
     image: "/projects/enterprise-blueprint.jpg",
-    description:
-      "Layered blueprint-style artwork inspired by iconic starship engineering and clean display-piece design.",
+    description: "Layered blueprint-style artwork inspired by iconic starship engineering and clean display-piece design.",
   },
   {
     title: "Millennium Falcon Clock",
     category: "Gaming & Sci-Fi Decor",
     image: "/projects/falcon-clock.jpg",
-    description:
-      "Laser-cut fandom clocks blending layered wood, engraving, and collector-display energy.",
+    description: "Laser-cut fandom clocks blending layered wood, engraving, and collector-display energy.",
   },
   {
     title: "Layered Illuminated Artwork",
     category: "Illuminated Art",
     image: "/projects/layered-light-art.jpg",
-    description:
-      "Multi-layer LED-enhanced artwork designed to glow with depth, contrast, and shadow.",
+    description: "Multi-layer LED-enhanced artwork designed to glow with depth, contrast, and shadow.",
   },
   {
     title: "Engraved Slate Coasters",
     category: "Custom Gifts",
     image: "/projects/slate-coasters.jpg",
-    description:
-      "Personalized slate coaster sets for game rooms, cabins, bars, and memorable gifts.",
+    description: "Personalized slate coaster sets for game rooms, cabins, bars, and memorable gifts.",
   },
   {
     title: "Custom Deck Boxes",
     category: "Gaming Gear",
     image: "/projects/deck-box.jpg",
-    description:
-      "Custom laser-crafted boxes designed for collectors, tabletop gamers, and commanders.",
+    description: "Custom laser-crafted boxes designed for collectors, tabletop gamers, and commanders.",
   },
   {
     title: "Workshop Process",
     category: "Behind the Scenes",
     image: "/projects/workshop-process.jpg",
-    description:
-      "The sparks, smoke, stain, assembly, and laser passes that turn raw material into finished work.",
+    description: "The sparks, smoke, stain, assembly, and laser passes that turn raw material into finished work.",
   },
 ];
 
-const metalYardArt = Array.from({ length: 44 }, (_, i) => {
-  return `/projects/Metal-Yard-Art (${i + 1}).jpg`;
-});
-
 const services = [
-  {
-    title: "Laser Engraving",
-    text:
-      "Wood, slate, signs, gifts, plaques, decor, gaming accessories, and crisp personalized details.",
-  },
-  {
-    title: "Woodworking",
-    text:
-      "Layered art, display pieces, home decor, tabletop accessories, and custom-built keepsakes.",
-  },
-  {
-    title: "Metal & Plasma",
-    text:
-      "Decorative cuts, shop pieces, rugged signs, metal accents, yard art, and outdoor pieces with a little spark baked in.",
-  },
+  { title: "Laser Engraving", text: "Wood, slate, signs, gifts, plaques, decor, gaming accessories, and crisp personalized details." },
+  { title: "Woodworking", text: "Layered art, display pieces, home decor, tabletop accessories, and custom-built keepsakes." },
+  { title: "Metal & Plasma", text: "Decorative cuts, shop pieces, rugged signs, metal accents, yard art, and outdoor pieces with a little spark baked in." },
 ];
 
 function ProjectCard({ project }) {
@@ -94,7 +72,7 @@ export default function Home() {
 
         <nav className="nav-links">
           <a href="#work">Work</a>
-          <a href="#metal-work">Metal Yard Art</a>
+          <a href="/yard-art">Yard Art</a>
           <a href="#services">Services</a>
           <a href="#custom">Custom Orders</a>
         </nav>
@@ -114,15 +92,8 @@ export default function Home() {
           </p>
 
           <div className="button-row">
-            <a
-              className="button primary"
-              href="mailto:rich@richcraftdesigns.com?subject=Custom%20Order%20Request"
-            >
-              Request Custom Work
-            </a>
-            <a className="button secondary" href="https://www.etsy.com/shop/RichCraftMade">
-              Shop Etsy
-            </a>
+            <a className="button primary" href="mailto:rich@richcraftdesigns.com?subject=Custom%20Order%20Request">Request Custom Work</a>
+            <a className="button secondary" href="https://www.etsy.com/shop/RichCraftMade">Shop Etsy</a>
           </div>
         </div>
 
@@ -134,18 +105,9 @@ export default function Home() {
       </section>
 
       <section className="intro-strip shell">
-        <div>
-          <strong>Custom-first</strong>
-          <span>Most work starts with your idea, space, theme, logo, fandom, or rough sketch.</span>
-        </div>
-        <div>
-          <strong>Built in the shop</strong>
-          <span>Laser engraving, woodworking, plasma cutting, finishing, lighting, and assembly.</span>
-        </div>
-        <div>
-          <strong>Examples for sale</strong>
-          <span>Finished pieces may be available, but they also show what can be customized.</span>
-        </div>
+        <div><strong>Custom-first</strong><span>Most work starts with your idea, space, theme, logo, fandom, or rough sketch.</span></div>
+        <div><strong>Built in the shop</strong><span>Laser engraving, woodworking, plasma cutting, finishing, lighting, and assembly.</span></div>
+        <div><strong>Examples for sale</strong><span>Finished pieces may be available, but they also show what can be customized.</span></div>
       </section>
 
       <section id="work" className="work-section shell">
@@ -153,30 +115,22 @@ export default function Home() {
           <p className="eyebrow">Featured Work</p>
           <h2>Real projects, clean details, and enough shop grit to prove it was built, not printed.</h2>
         </div>
-
         <div className="project-grid">
-          {projects.map((project) => (
-            <ProjectCard key={project.title} project={project} />
-          ))}
+          {projects.map((project) => <ProjectCard key={project.title} project={project} />)}
         </div>
       </section>
 
-      <section id="metal-work" className="metal-section shell">
-        <div className="section-heading">
+      <section className="yard-art-teaser shell">
+        <div className="custom-card">
           <p className="eyebrow">Metal Yard Art</p>
-          <h2>Rustic outdoor pieces staged for cabins, shops, gardens, fences, patios, and wide-open spaces.</h2>
-          <p className="section-subtext">
-            These staged examples show the style, finish, and outdoor personality we can build around.
-            Pick from existing pieces or use them as a starting point for custom metal work.
+          <h2>Rustic outdoor pieces for cabins, shops, gardens, fences, patios, and wide-open spaces.</h2>
+          <p>
+            Browse staged examples of metal yard art and outdoor pieces. Pick from existing work
+            or use the gallery as a starting point for a custom metal project.
           </p>
-        </div>
-
-        <div className="metal-grid">
-          {metalYardArt.map((image, index) => (
-            <article className="metal-card" key={image}>
-              <img src={image} alt={`Metal yard art example ${index + 1}`} />
-            </article>
-          ))}
+          <div className="button-row">
+            <a className="button primary" href="/yard-art">View Yard Art Gallery</a>
+          </div>
         </div>
       </section>
 
@@ -185,7 +139,6 @@ export default function Home() {
           <p className="eyebrow">Shop Capabilities</p>
           <h2>Small-batch custom work with a wide creative range.</h2>
         </div>
-
         <div className="service-grid">
           {services.map((service) => (
             <article className="service-card" key={service.title}>
@@ -200,21 +153,10 @@ export default function Home() {
         <div className="custom-card">
           <p className="eyebrow">Custom Orders</p>
           <h2>Have an idea? Send the rough version. The polished version starts here.</h2>
-          <p>
-            Logos, themes, photos, fandoms, names, dates, dimensions, cabin ideas,
-            tabletop gear, memorial pieces, yard art, and oddball concepts are all fair game.
-          </p>
-
+          <p>Logos, themes, photos, fandoms, names, dates, dimensions, cabin ideas, tabletop gear, memorial pieces, yard art, and oddball concepts are all fair game.</p>
           <div className="button-row">
-            <a
-              className="button primary"
-              href="mailto:rich@richcraftdesigns.com?subject=Custom%20Order%20Request"
-            >
-              Start a Custom Order
-            </a>
-            <a className="button secondary" href="https://www.etsy.com/shop/RichCraftMade">
-              View Etsy Shop
-            </a>
+            <a className="button primary" href="mailto:rich@richcraftdesigns.com?subject=Custom%20Order%20Request">Start a Custom Order</a>
+            <a className="button secondary" href="https://www.etsy.com/shop/RichCraftMade">View Etsy Shop</a>
           </div>
         </div>
       </section>
