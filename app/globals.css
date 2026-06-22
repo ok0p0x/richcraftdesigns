@@ -424,3 +424,13 @@ img, video { display: block; max-width: 100%; }
   padding: 10px 14px;
   font-size: 13px;
 }
+.metal-card-actions {
+  padding: 14px;
+}
+
+.small-button {
+  margin-top: 16px;
+  min-height: 38px;
+  padding: 10px 14px;
+  font-size: 13px;
+}
