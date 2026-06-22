@@ -1,4 +1,3 @@
-
 export default function CustomOrderPage() {
   return (
     <main>
@@ -24,17 +23,22 @@ export default function CustomOrderPage() {
           <p className="eyebrow">Custom Order Request</p>
           <h1>Tell me what you want built.</h1>
           <p>
-            Rough ideas are welcome. Send the concept, size, material preference, deadline,
-            budget range, and any inspiration you already have. I’ll review it and follow up.
+            Rough ideas are welcome. Send the concept, size, material preference,
+            deadline, budget range, and any inspiration you already have. I’ll review
+            it and follow up.
           </p>
         </div>
 
         <form
           className="custom-order-form"
-          action="https://formspree.io/f/YOUR_FORM_ID"
+          action="https://formspree.io/f/mkolnyqe"
           method="POST"
         >
-          <input type="hidden" name="_subject" value="New Rich Craft Designs Custom Order Request" />
+          <input
+            type="hidden"
+            name="_subject"
+            value="New Rich Craft Designs Custom Order Request"
+          />
 
           <div className="form-grid">
             <label>
@@ -68,7 +72,7 @@ export default function CustomOrderPage() {
 
             <label>
               Approximate Size
-              <input name="size" type="text" placeholder='Example: 12" x 18", 3 ft tall, etc.' />
+              <input name="size" type="text" placeholder={'Example: 12" x 18", 3 ft tall, etc.'} />
             </label>
 
             <label>
@@ -109,7 +113,7 @@ export default function CustomOrderPage() {
           </button>
 
           <p className="form-note">
-            This form sends your request to info@richcraftdesigns.com once Formspree is connected.
+            This form sends your request through Formspree to Rich Craft Designs.
           </p>
         </form>
       </section>
