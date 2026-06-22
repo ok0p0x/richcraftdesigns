@@ -36,9 +36,12 @@ export default function CustomOrderPage({ searchParams }) {
           method="POST"
         >
           <input
-            type="hidden"
-            name="_subject"
-            <label>
+  type="hidden"
+  name="_subject"
+  value="New Rich Craft Designs Custom Order Request"
+/>
+
+<label>
   Requested Item / Inspiration Piece
   <input
     name="requested_item"
