@@ -57,19 +57,17 @@ export default function YardArtPage() {
 
         <div className="metal-grid">
           {yardArt.map((image, index) => (
-            <article className="metal-card" key={image.file}>
+           <article className="metal-card" key={image.file}>
   <img src={image.src} alt={`Metal yard art example ${index + 1}`} />
 
-  <div className="metal-card-actions">
-    <a
-      className="button secondary small-button"
-      href={`/custom-order?item=${encodeURIComponent(
-        `Metal Yard Art Example ${index + 1}`
-      )}`}
-    >
-      Request This Piece
-    </a>
-  </div>
+  <a
+    className="yard-art-button"
+    href={`/custom-order?item=${encodeURIComponent(
+      `Metal Yard Art Example ${index + 1}`
+    )}`}
+  >
+    Request This Piece
+  </a>
 </article>
           ))}
         </div>
