@@ -1,10 +1,6 @@
-"use client";
-
-import { useSearchParams } from "next/navigation";
-
-export default function CustomOrderPage() {
-  const searchParams = useSearchParams();
-  const requestedItem = searchParams.get("item") || "";
+export default async function CustomOrderPage({ searchParams }) {
+  const params = await searchParams;
+  const requestedItem = params?.item || "";
 
   return (
     <main className="shell">
@@ -13,14 +9,13 @@ export default function CustomOrderPage() {
           <p className="eyebrow">Custom Order Request</p>
 
           <h1>
-            Have an idea? Send the rough version.
-            The polished version starts here.
+            Have an idea? Send the rough version. The polished version starts here.
           </h1>
 
           <p>
-            Tell us what you have in mind. Whether it's a completely custom
-            design, something you've seen on the site, or just a rough sketch,
-            we'll work with you to bring it to life.
+            Tell us what you have in mind. Whether it&apos;s a completely custom
+            design, something you&apos;ve seen on the site, or just a rough sketch,
+            we&apos;ll work with you to bring it to life.
           </p>
         </div>
 
@@ -38,22 +33,12 @@ export default function CustomOrderPage() {
           <div className="form-grid">
             <label>
               Name
-              <input
-                type="text"
-                name="name"
-                required
-                placeholder="Your name"
-              />
+              <input type="text" name="name" required placeholder="Your name" />
             </label>
 
             <label>
               Email
-              <input
-                type="email"
-                name="email"
-                required
-                placeholder="you@example.com"
-              />
+              <input type="email" name="email" required placeholder="you@example.com" />
             </label>
           </div>
 
@@ -68,26 +53,18 @@ export default function CustomOrderPage() {
           </label>
 
           <label>
-            Phone Number (optional)
-            <input
-              type="tel"
-              name="phone"
-              placeholder="(555) 555-5555"
-            />
+            Phone Number optional
+            <input type="tel" name="phone" placeholder="(555) 555-5555" />
           </label>
 
           <label>
-            Dimensions / Size (optional)
-            <input
-              type="text"
-              name="dimensions"
-              placeholder='Example: 24" x 18"'
-            />
+            Dimensions / Size optional
+            <input type="text" name="dimensions" placeholder={'Example: 24" x 18"'} />
           </label>
 
           <label>
-            Budget Range (optional)
-            <select name="budget">
+            Budget Range optional
+            <select name="budget" defaultValue="">
               <option value="">Select a budget range</option>
               <option>$0 - $50</option>
               <option>$50 - $100</option>
@@ -103,7 +80,7 @@ export default function CustomOrderPage() {
               name="message"
               rows="8"
               required
-              placeholder="Describe your idea, theme, materials, personalization, colors, or anything else you'd like us to know."
+              placeholder="Describe your idea, theme, materials, personalization, colors, or anything else you&apos;d like us to know."
             />
           </label>
 
