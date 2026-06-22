@@ -92,7 +92,7 @@ export default function Home() {
           </p>
 
           <div className="button-row">
-            <a className="button primary" href="mailto:rich@richcraftdesigns.com?subject=Custom%20Order%20Request">Request Custom Work</a>
+            <a className="button primary" href="/custom-order">Start a Custom Order</a>
             <a className="button secondary" href="https://www.etsy.com/shop/RichCraftMade">Shop Etsy</a>
           </div>
         </div>
@@ -155,7 +155,7 @@ export default function Home() {
           <h2>Have an idea? Send the rough version. The polished version starts here.</h2>
           <p>Logos, themes, photos, fandoms, names, dates, dimensions, cabin ideas, tabletop gear, memorial pieces, yard art, and oddball concepts are all fair game.</p>
           <div className="button-row">
-            <a className="button primary" href="mailto:rich@richcraftdesigns.com?subject=Custom%20Order%20Request">Start a Custom Order</a>
+            <a className="button primary" href="/custom-order">Request Custom Work</a>
             <a className="button secondary" href="https://www.etsy.com/shop/RichCraftMade">View Etsy Shop</a>
           </div>
         </div>
