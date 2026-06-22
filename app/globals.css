@@ -418,3 +418,9 @@ img, video { display: block; max-width: 100%; }
     grid-template-columns: 1fr;
   }
 }
+.small-button {
+  margin-top: 16px;
+  min-height: 38px;
+  padding: 10px 14px;
+  font-size: 13px;
+}
