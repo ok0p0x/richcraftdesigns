@@ -435,3 +435,36 @@ img, video { display: block; max-width: 100%; }
   padding: 10px 14px;
   font-size: 13px;
 }
+.metal-card {
+  position: relative;
+}
+
+.yard-art-button {
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 14px;
+  z-index: 5;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 40px;
+  padding: 10px 14px;
+  border-radius: 12px;
+
+  background: linear-gradient(135deg, var(--amber), var(--ember));
+  color: #140904;
+  font-size: 13px;
+  font-weight: 800;
+  text-align: center;
+
+  box-shadow:
+    0 12px 28px rgba(0,0,0,0.45),
+    0 0 18px rgba(255,173,31,0.22);
+}
+
+.yard-art-button:hover {
+  transform: translateY(-2px);
+}
