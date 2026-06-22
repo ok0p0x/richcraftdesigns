@@ -53,6 +53,12 @@ function ProjectCard({ project }) {
         <p>{project.category}</p>
         <h3>{project.title}</h3>
         <span>{project.description}</span>
+        <a
+  className="button secondary small-button"
+  href={`/custom-order?item=${encodeURIComponent(project.title)}`}
+>
+  Request This Piece
+</a>
       </div>
     </article>
   );
