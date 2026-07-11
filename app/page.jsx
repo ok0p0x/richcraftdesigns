@@ -126,6 +126,7 @@ export default function Home() {
 
         <nav className="nav-links">
           <a href="#collections">Collections</a>
+          <a href="/gallery">Gallery</a>
           <a href="#signature">Signature Work</a>
           <a href="/yard-art">Yard Art</a>
           <a href="/custom-order">Start a Project</a>
